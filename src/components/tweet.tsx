@@ -1,5 +1,6 @@
 import React, {MouseEvent} from 'react';
 import moment from 'moment';
+import toast from "react-hot-toast";
 
 export interface ITweetProps {
   by: any,
@@ -24,7 +25,10 @@ export const Tweet = ({by, created_at, id, text}: ITweetProps) => {
       </p>
       <div className="flex justify-between items-center">
         <div className="flex items-center">
-          <a href="#" onClick={(event: MouseEvent<HTMLAnchorElement>) => event.preventDefault()}
+          <a href="#" onClick={(event: MouseEvent<HTMLAnchorElement>) => {
+            event.preventDefault();
+            toast.error('LIKE is not implemented yet.');
+          }}
              className="text-gray-500 hover:text-gray-700 mr-4 flex flex-row">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                  stroke="currentColor" className="size-6">
@@ -33,11 +37,17 @@ export const Tweet = ({by, created_at, id, text}: ITweetProps) => {
             </svg>
             <span>Like</span>
           </a>
-          <a href="#" onClick={(event: MouseEvent<HTMLAnchorElement>) => event.preventDefault()}
+          <a href="#" onClick={(event: MouseEvent<HTMLAnchorElement>) => {
+            event.preventDefault();
+            toast.error('REPLY is not implemented yet.');
+          }}
              className="text-gray-500 hover:text-gray-700"><i className="far fa-comment-alt"></i> Reply</a>
         </div>
         <div className="flex items-center">
-          <a href="#" onClick={(event: MouseEvent<HTMLAnchorElement>) => event.preventDefault()}
+          <a href="#" onClick={(event: MouseEvent<HTMLAnchorElement>) => {
+            event.preventDefault();
+            toast.error('SHARE is not implemented yet.');
+          }}
              className="text-gray-500 hover:text-gray-700 flex flex-row">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                  stroke="currentColor" className="size-6">
