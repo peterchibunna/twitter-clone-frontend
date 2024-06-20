@@ -74,6 +74,9 @@ export const Layout: FC<{ children: JSX.Element | JSX.Element[] }> = ({children}
       active={isLoading}
       spinner
       styles={{
+        "wrapper":{
+          height: '100vh',
+        },
         "overlay": {
           zIndex: 9800,
           position: 'fixed',
@@ -253,11 +256,11 @@ export const Layout: FC<{ children: JSX.Element | JSX.Element[] }> = ({children}
         </header>*/}
           <main className={"grow flex flex-col"}>
             <div className="py-6 sm:px-6 lg:px-8 grow flex flex-col" style={{
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center center',
-              backgroundAttachment: 'fixed',
-              backgroundImage: 'url(https://plus.unsplash.com/premium_photo-1673306778968-5aab577a7365?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)'
+              // backgroundRepeat: 'no-repeat',
+              // backgroundSize: 'cover',
+              // backgroundPosition: 'center center',
+              // backgroundAttachment: 'fixed',
+              // backgroundImage: 'url(https://images.unsplash.com/photo-1527086983597-b4d44c4a66d0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)'
             }}>{children}</div>
             <Modal
               isOpen={modalIsOpen}

@@ -24,8 +24,8 @@ function App() {
             <Route element={<PrivateRoute/>}>
               <Route path="/auth/change-password" element={<ChangePassword/>}/>
               {/*<Route path="/tweets" element={<Tweets/>}/>*/}
-              <Route path="/tweets/personal" element={<PersonalTweets/>}/>
-              <Route path="/tweets/shared" element={<SharedTweets/>}/>
+              <Route path="/tweets/personal" element={<PersonalTweets data={[]}/>}/>
+              <Route path="/tweets/shared" element={<SharedTweets data={[]}/>}/>
               <Route path="/tweets/write" element={<WriteTweet/>}/>
             </Route>
           </Routes>

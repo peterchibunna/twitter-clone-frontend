@@ -16,7 +16,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --background-color: #ccc;
-  --primary-color: #646cff;
+  --primary-color: #2b2b2c;
 }
 
 body, #root {
@@ -42,11 +42,16 @@ button, .btn {
   line-height: 1em;
   font-weight: 500;
   /*font-family: inherit;*/
-  background-color: var(--primary-color);
   /*transition: border-color 0.25s;*/
   color: #fff;
   @apply inline-block mx-1 text-center disabled:opacity-75 rounded-lg transition-all;
-  @apply enabled:cursor-pointer disabled:cursor-not-allowed enabled:hover:bg-[#13132e]
+  @apply enabled:cursor-pointer disabled:cursor-not-allowed enabled:bg-[var(--primary-color)] enabled:hover:bg-[#13132e];
+  @apply disabled:text-gray-800
+  /*background-color: var(--primary-color);*/
+}
+
+.btn.btn-lg {
+  @apply p-5 rounded-full transition-all;
 }
 
 button:focus,
@@ -81,6 +86,10 @@ button:focus-visible {
   color: #333333;
   @apply w-full min-w-60 md:max-w-[800px] md:mx-auto
   /*//min-w-full*/
+}
+
+p {
+  @apply leading-loose mb-4 text-justify;
 }
 
 @media (prefers-color-scheme: light) {
