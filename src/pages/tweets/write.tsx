@@ -21,7 +21,8 @@ export function WriteTweet({isLoading, setLoading, setIsOpen}: any) {
         body: JSON.stringify({
           text: tweet,
           by: `/api/v1/person/${auth?.user?.id}/`,
-          shared_with: [`/api/v1/person/${auth?.user?.id}/`], // todo:
+          // shared_with: [`/api/v1/person/${auth?.user?.id}/`], // todo:
+          shared_with: [], // todo:
         }),
       });
       const res = await response.json();
