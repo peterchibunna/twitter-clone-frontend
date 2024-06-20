@@ -53,7 +53,7 @@ export function WriteTweet({isLoading, setLoading, setIsOpen}: any) {
           placeholder="Write your tweet here"></textarea>
         <div className="flex justify-between mt-2 text-xs">{tweet.length} character{tweet.length != 1 && 's'}</div>
         <div className="flex justify-between mt-2">
-          <p className="">Sharing Options</p>
+          <p className="italic font-bold text-amber-700">Sharing Options [choose users: work in progress]</p>
           <button
             onClick={postTweet}
             disabled={tweet.length <= 1}
