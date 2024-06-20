@@ -1,7 +1,7 @@
 import toast from "react-hot-toast";
 
-// export const API_SERVER_URL: string = 'https://twitter-clone-backend-edju.onrender.com';
-export const API_SERVER_URL = 'http://localhost:8000';
+export const API_SERVER_URL: string = 'https://twitter-clone-backend-edju.onrender.com';
+// export const API_SERVER_URL = 'http://localhost:8000';
 
 export const fetchTweets = async (userId: string) => {
   const response = await fetch(`${API_SERVER_URL}/api/v1/tweet/?for_user=${userId}`, {
