@@ -55,3 +55,4 @@ export const sendTweetEmailNotification = (data: any[]) => {
     toast.success(`New Tweet Posted by ${sender}. This is an [emulated] email`);
   });
 }
+export const fetcher = (url: string, token: string) => fetch(url).then(r => r.json())
